@@ -1,34 +1,38 @@
 body{
-    margin:0;
-    background:#050816;
-    color:white;
-    font-family:Arial,sans-serif;
-}
+        margin:0;
+            padding:0;
+                background:#000;
+                    color:white;
+                        font-family:Arial, sans-serif;
+                            display:flex;
+                                justify-content:center;
+                                    align-items:center;
+                                        height:100vh;
+                                        }
 
-.container{
-    height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-    align-items:center;
-}
+                                        .container{
+                                            text-align:center;
+                                            }
 
-h1{
-    font-size:52px;
-    letter-spacing:6px;
-    margin-bottom:10px;
-}
+                                            h1{
+                                                font-size:48px;
+                                                    color:#00e5ff;
+                                                        text-shadow:0 0 10px #00e5ff, 0 0 20px #00e5ff;
+                                                        }
 
-.subtitle{
-    color:#9fb3d9;
-    margin-bottom:40px;
-}
+                                                        .subtitle{
+                                                            color:#bdbdbd;
+                                                                margin-bottom:30px;
+                                                                }
 
-.chat-btn{
-    background:#2563eb;
-    color:white;
-    border:none;
-    padding:15px 30px;
-    border-radius:40px;
-    font-size:18px;
+                                                                .start-btn{
+                                                                    padding:15px 35px;
+                                                                        font-size:18px;
+                                                                            border:none;
+                                                                                border-radius:30px;
+                                                                                    background:#00e5ff;
+                                                                                        color:black;
+                                                                                            cursor:pointer;
+                                                                                                box-shadow:0 0 20px #00e5ff;
+                                                                                                }
 }
