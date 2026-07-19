@@ -35,4 +35,30 @@ body{
                                                                                             cursor:pointer;
                                                                                                 box-shadow:0 0 20px #00e5ff;
                                                                                                 }
+}body{
+        background: radial-gradient(circle at center,#08111f,#000);
+        }
+
+        .start-btn{
+            transition:0.3s;
+            }
+
+            .start-btn:hover{
+                transform:scale(1.08);
+                    box-shadow:0 0 30px #00e5ff;
+                    }
+
+                    h1{
+                        animation: glow 2s infinite alternate;
+                        }
+
+                        @keyframes glow{
+                            from{
+                                    text-shadow:0 0 10px #00e5ff;
+                                        }
+                                            to{
+                                                    text-shadow:0 0 30px #00e5ff,
+                                                                        0 0 60px #00e5ff;
+                                                                            }
+                                                                            }
 }
