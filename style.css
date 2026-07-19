@@ -24,31 +24,30 @@ body {
                                 .subtitle {
                                   color: #bdbdbd;
                                     margin-bottom: 30px;
-                                      font-size: 20px;
-                                      }
+                                    }
 
-                                      .start-btn {
-                                        padding: 15px 35px;
-                                          font-size: 18px;
-                                            border: none;
-                                              border-radius: 30px;
-                                                background: #00e5ff;
-                                                  color: #000;
-                                                    cursor: pointer;
-                                                      transition: 0.3s;
-                                                      }
+                                    .start-btn {
+                                      padding: 15px 35px;
+                                        font-size: 18px;
+                                          border: none;
+                                            border-radius: 30px;
+                                              background: #00e5ff;
+                                                color: #000;
+                                                  cursor: pointer;
+                                                    transition: 0.3s;
+                                                    }
 
-                                                      .start-btn:hover {
-                                                        transform: scale(1.08);
-                                                          box-shadow: 0 0 30px #00e5ff;
-                                                          }
+                                                    .start-btn:hover {
+                                                      transform: scale(1.08);
+                                                        box-shadow: 0 0 30px #00e5ff;
+                                                        }
 
-                                                          @keyframes glow {
-                                                            from {
-                                                                text-shadow: 0 0 10px #00e5ff;
-                                                                  }
+                                                        @keyframes glow {
+                                                          from {
+                                                              text-shadow: 0 0 10px #00e5ff;
+                                                                }
+                                                                  to {
+                                                                      text-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
+                                                                        }
+                                                                        }
 
-                                                                    to {
-                                                                        text-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
-                                                                          }
-                                                                          }
