@@ -1,7 +1,7 @@
 body{
         margin:0;
             padding:0;
-                background:#000;
+                background: radial-gradient(circle at center, #08111f, #000);
                     color:white;
                         font-family:Arial, sans-serif;
                             display:flex;
@@ -17,48 +17,38 @@ body{
                                             h1{
                                                 font-size:48px;
                                                     color:#00e5ff;
-                                                        text-shadow:0 0 10px #00e5ff, 0 0 20px #00e5ff;
-                                                        }
+                                                        text-shadow:0 0 10px #00e5ff;
+                                                            animation: glow 2s infinite alternate;
+                                                            }
 
-                                                        .subtitle{
-                                                            color:#bdbdbd;
-                                                                margin-bottom:30px;
-                                                                }
+                                                            .subtitle{
+                                                                color:#bdbdbd;
+                                                                    margin-bottom:30px;
+                                                                        font-size:20px;
+                                                                        }
 
-                                                                .start-btn{
-                                                                    padding:15px 35px;
-                                                                        font-size:18px;
-                                                                            border:none;
-                                                                                border-radius:30px;
-                                                                                    background:#00e5ff;
-                                                                                        color:black;
-                                                                                            cursor:pointer;
-                                                                                                box-shadow:0 0 20px #00e5ff;
-                                                                                                }
-}body{
-        background: radial-gradient(circle at center,#08111f,#000);
-        }
+                                                                        .start-btn{
+                                                                            padding:15px 35px;
+                                                                                font-size:18px;
+                                                                                    border:none;
+                                                                                        border-radius:30px;
+                                                                                            background:#00e5ff;
+                                                                                                color:#000;
+                                                                                                    cursor:pointer;
+                                                                                                        transition:0.3s;
+                                                                                                        }
 
-        .start-btn{
-            transition:0.3s;
-            }
+                                                                                                        .start-btn:hover{
+                                                                                                            transform:scale(1.08);
+                                                                                                                box-shadow:0 0 30px #00e5ff;
+                                                                                                                }
 
-            .start-btn:hover{
-                transform:scale(1.08);
-                    box-shadow:0 0 30px #00e5ff;
-                    }
-
-                    h1{
-                        animation: glow 2s infinite alternate;
-                        }
-
-                        @keyframes glow{
-                            from{
-                                    text-shadow:0 0 10px #00e5ff;
-                                        }
-                                            to{
-                                                    text-shadow:0 0 30px #00e5ff,
-                                                                        0 0 60px #00e5ff;
-                                                                            }
-                                                                            }
+                                                                                                                @keyframes glow{
+                                                                                                                    from{
+                                                                                                                            text-shadow:0 0 10px #00e5ff;
+                                                                                                                                }
+                                                                                                                                    to{
+                                                                                                                                            text-shadow:0 0 30px #00e5ff, 0 0 60px #00e5ff;
+                                                                                                                                                }
+                                                                                                                                                }
 }
