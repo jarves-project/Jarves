@@ -1,28 +1,27 @@
-const startBtn = document.querySelector(".start-btn");
-const micBtn = document.querySelector(".mic-btn");
-const chatBox = document.getElementById("chat-box");
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Jarves AI</title>
+                <link rel="stylesheet" href="style.css">
+                </head>
+                <body>
 
-function jarvesReply(text) {
-  chatBox.innerHTML += `<p><strong>Jarves:</strong> ${text}</p>`;
+                <div class="container">
+                    <h1>JARVES</h1>
+                        <p class="subtitle">The Future AI Assistant</p>
 
-    if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
+                            <button class="start-btn">Start</button>
 
-            const speech = new SpeechSynthesisUtterance(text);
-                speech.lang = "en-US";
-                    speech.rate = 1;
-                        speech.pitch = 1;
-                            speech.volume = 1;
+                                <button class="mic-btn">🎤</button>
 
-                                speechSynthesis.speak(speech);
-                                  }
-                                  }
+                                    <div id="chat-box">
+                                            <p>Jarves is ready...</p>
+                                                </div>
+                                                </div>
 
-                                  startBtn.addEventListener("click", () => {
-                                    chatBox.innerHTML = "";
-                                      jarvesReply("Hello Sam! I am Jarves. Welcome.");
-                                      });
+                                                <script src="script.js"></script>
 
-                                      micBtn.addEventListener("click", () => {
-                                        jarvesReply("Microphone feature is coming soon.");
-                                        });
+                                                </body>
+                                                </html>
