@@ -1,53 +1,68 @@
 body {
       margin: 0;
-        padding: 0;
-          background: radial-gradient(circle at center, #08111f, #000);
-            color: white;
-              font-family: Arial, sans-serif;
-                display: flex;
-                  justify-content: center;
-                    align-items: center;
-                      height: 100vh;
-                      }
+          padding: 0;
+              background: radial-gradient(circle at center, #08111f, #000000);
+                  color: white;
+                      font-family: Arial, sans-serif;
+                          display: flex;
+                              justify-content: center;
+                                  align-items: center;
+                                      height: 100vh;
+                                      }
 
-                      .container {
-                        text-align: center;
-                        }
+                                      .container {
+                                          text-align: center;
+                                          }
 
-                        h1 {
-                          font-size: 48px;
-                            color: #00e5ff;
-                              text-shadow: 0 0 10px #00e5ff;
-                                animation: glow 2s infinite alternate;
-                                }
+                                          h1 {
+                                              font-size: 48px;
+                                                  color: #00e5ff;
+                                                      text-shadow: 0 0 10px #00e5ff;
+                                                          animation: glow 2s infinite alternate;
+                                                          }
 
-                                .subtitle {
-                                  color: #bdbdbd;
-                                    margin-bottom: 30px;
-                                    }
+                                                          .subtitle {
+                                                              color: #bdbdbd;
+                                                                  margin-bottom: 20px;
+                                                                  }
 
-                                    .start-btn {
-                                      padding: 15px 35px;
-                                        font-size: 18px;
-                                          border: none;
-                                            border-radius: 30px;
-                                              background: #00e5ff;
-                                                color: #000;
-                                                  cursor: pointer;
-                                                    transition: 0.3s;
-                                                    }
+                                                                  .start-btn,
+                                                                  .mic-btn {
+                                                                      margin: 10px;
+                                                                          padding: 15px 30px;
+                                                                              border: none;
+                                                                                  border-radius: 30px;
+                                                                                      background: #00e5ff;
+                                                                                          color: #000;
+                                                                                              font-size: 18px;
+                                                                                                  cursor: pointer;
+                                                                                                      transition: 0.3s;
+                                                                                                      }
 
-                                                    .start-btn:hover {
-                                                      transform: scale(1.08);
-                                                        box-shadow: 0 0 30px #00e5ff;
-                                                        }
+                                                                                                      .start-btn:hover,
+                                                                                                      .mic-btn:hover {
+                                                                                                          transform: scale(1.08);
+                                                                                                              box-shadow: 0 0 20px #00e5ff;
+                                                                                                              }
 
-                                                        @keyframes glow {
-                                                          from {
-                                                              text-shadow: 0 0 10px #00e5ff;
-                                                                }
-                                                                  to {
-                                                                      text-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
-                                                                        }
-                                                                        }
+                                                                                                              #chat-box {
+                                                                                                                  width: 340px;
+                                                                                                                      min-height: 120px;
+                                                                                                                          margin: 25px auto;
+                                                                                                                              padding: 15px;
+                                                                                                                                  border: 1px solid #00e5ff;
+                                                                                                                                      border-radius: 15px;
+                                                                                                                                          background: rgba(255,255,255,0.08);
+                                                                                                                                              text-align: left;
+                                                                                                                                                  box-shadow: 0 0 15px rgba(0,229,255,0.5);
+                                                                                                                                                  }
 
+                                                                                                                                                  @keyframes glow {
+                                                                                                                                                      from {
+                                                                                                                                                              text-shadow: 0 0 10px #00e5ff;
+                                                                                                                                                                  }
+
+                                                                                                                                                                      to {
+                                                                                                                                                                              text-shadow: 0 0 30px #00e5ff, 0 0 60px #00e5ff;
+                                                                                                                                                                                  }
+                                                                                                                                                                                  }

@@ -1,27 +1,28 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Jarves</title>
-                <link rel="stylesheet" href="style.css">
-                </head>
+const startBtn = document.querySelector(".start-btn");
+const micBtn = document.querySelector(".mic-btn");
+const chatBox = document.getElementById("chat-box");
 
-                <body>
+function jarvesReply(text) {
+  chatBox.innerHTML += `<p><strong>Jarves:</strong> ${text}</p>`;
 
-                    <div class="container">
-                            <h1>JARVES</h1>
+    if ("speechSynthesis" in window) {
+        speechSynthesis.cancel();
 
-                                    <p class="subtitle">The Future AI Assistant</p>
+            const speech = new SpeechSynthesisUtterance(text);
+                speech.lang = "en-US";
+                    speech.rate = 1;
+                        speech.pitch = 1;
+                            speech.volume = 1;
 
-                                            <button class="start-btn">
-                                                        Start
-                                                                </button>
+                                speechSynthesis.speak(speech);
+                                  }
+                                  }
 
-                                                                        <div id="chat-box"></div>
-                                                                            </div>
+                                  startBtn.addEventListener("click", () => {
+                                    chatBox.innerHTML = "";
+                                      jarvesReply("Hello Sam! I am Jarves. Welcome.");
+                                      });
 
-                                                                                <script src="script.js"></script>
-
-                                                                                </body>
-                                                                                </html>
+                                      micBtn.addEventListener("click", () => {
+                                        jarvesReply("Microphone feature is coming soon.");
+                                        });
