@@ -2,27 +2,45 @@ const startBtn = document.querySelector(".start-btn");
 const micBtn = document.querySelector(".mic-btn");
 const chatBox = document.getElementById("chat-box");
 
-function jarvesReply(text) {
-  chatBox.innerHTML += `<p><strong>Jarves:</strong> ${text}</p>`;
+function addMessage(sender, text) {
+  chatBox.innerHTML += `<p><strong>${sender}:</strong> ${text}</p>`;
+    chatBox.scrollTop = chatBox.scrollHeight;
+    }
 
-    if ("speechSynthesis" in window) {
-        speechSynthesis.cancel();
+    startBtn.addEventListener("click", () => {
+      chatBox.innerHTML = "";
+        addMessage("Jarves", "Hello Sam! Click the microphone and speak.");
+        });
 
-            const speech = new SpeechSynthesisUtterance(text);
-                speech.lang = "en-US";
-                    speech.rate = 1;
-                        speech.pitch = 1;
-                            speech.volume = 1;
+        const SpeechRecognition =
+          window.SpeechRecognition || window.webkitSpeechRecognition;
 
-                                speechSynthesis.speak(speech);
-                                  }
-                                  }
+          if (SpeechRecognition) {
+            const recognition = new SpeechRecognition();
 
-                                  startBtn.addEventListener("click", () => {
-                                    chatBox.innerHTML = "";
-                                      jarvesReply("Hello Sam! I am Jarves. Welcome.");
-                                      });
+              recognition.lang = "en-US";
+                recognition.interimResults = false;
+                  recognition.maxAlternatives = 1;
 
-                                      micBtn.addEventListener("click", () => {
-                                        jarvesReply("Microphone feature is coming soon.");
-                                        });
+                    micBtn.addEventListener("click", () => {
+                        addMessage("Jarves", "Listening...");
+                            recognition.start();
+                              });
+
+                                recognition.onresult = (event) => {
+                                    const text = event.results[0][0].transcript;
+                                        addMessage("You", text);
+                                            addMessage("Jarves", "I heard: " + text);
+                                              };
+
+                                                recognition.onerror = () => {
+                                                    addMessage("Jarves", "Sorry, I couldn't hear you.");
+                                                      };
+                                                      } else {
+                                                        micBtn.addEventListener("click", () => {
+                                                            addMessage(
+                                                                  "Jarves",
+                                                                        "Speech Recognition is not supported in this browser."
+                                                                            );
+                                                                              });
+                                                                              }
