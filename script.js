@@ -1,10 +1,14 @@
 const startBtn = document.querySelector(".start-btn");
+const chatBox = document.getElementById("chat-box");
 
-startBtn.addEventListener("click", function () {
-  startBtn.textContent = "Starting Jarves...";
+startBtn.addEventListener("click", () => {
+  chatBox.innerHTML = `
+      <p><strong>Jarves:</strong> Hello Sam! I am ready to assist you.</p>
+        `;
 
-    setTimeout(function () {
-        alert("Welcome to Jarves!");
-            startBtn.textContent = "Start";
-              }, 1000);
-              });
+          const speech = new SpeechSynthesisUtterance(
+              "Hello Sam! I am ready to assist you."
+                );
+                  speech.lang = "en-US";
+                    window.speechSynthesis.speak(speech);
+                    });
