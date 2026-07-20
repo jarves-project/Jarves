@@ -1,5 +1,10 @@
-const button = document.querySelector(".start-btn");
+const startBtn = document.querySelector(".start-btn");
 
-button.addEventListener("click", () => {
-    alert("Hello Sam! I am Jarves. Welcome!");
-    });
+startBtn.addEventListener("click", function () {
+  startBtn.textContent = "Starting Jarves...";
+
+    setTimeout(function () {
+        alert("Welcome to Jarves!");
+            startBtn.textContent = "Start";
+              }, 1000);
+              });
