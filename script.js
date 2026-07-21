@@ -9,7 +9,7 @@ function addMessage(sender, text) {
 
     startBtn.addEventListener("click", () => {
       chatBox.innerHTML = "";
-        addMessage("Jarves", "Hello Sam! Click the microphone and speak.");
+        addMessage("Jarves", "Hello Sam! I am ready.");
         });
 
         const SpeechRecognition =
@@ -29,18 +29,26 @@ function addMessage(sender, text) {
 
                                 recognition.onresult = (event) => {
                                     const text = event.results[0][0].transcript;
-                                        addMessage("You", text);
-                                            addMessage("Jarves", "I heard: " + text);
-                                              };
 
-                                                recognition.onerror = () => {
-                                                    addMessage("Jarves", "Sorry, I couldn't hear you.");
-                                                      };
-                                                      } else {
-                                                        micBtn.addEventListener("click", () => {
-                                                            addMessage(
-                                                                  "Jarves",
-                                                                        "Speech Recognition is not supported in this browser."
-                                                                            );
-                                                                              });
-                                                                              }
+                                        addMessage("You", text);
+                                            addMessage("Jarves", "You said: " + text);
+
+                                                const speech = new SpeechSynthesisUtterance("You said " + text);
+                                                    speech.lang = "en-US";
+                                                        window.speechSynthesis.speak(speech);
+                                                          };
+
+                                                            recognition.onerror = () => {
+                                                                addMessage("Jarves", "Sorry, I couldn't hear you.");
+                                                                  };
+
+                                                                  } else {
+
+                                                                    micBtn.addEventListener("click", () => {
+                                                                        addMessage(
+                                                                              "Jarves",
+                                                                                    "Speech Recognition is not supported in this browser."
+                                                                                        );
+                                                                                          });
+
+                                                                                          }
